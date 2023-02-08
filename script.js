@@ -1,43 +1,17 @@
-/*let addOperator = function (a,b) {
-    console.log(a + b)
-}
+const buttons = document.querySelectorAll('button');
+const display = document.querySelector('#display');
+const equal = document.querySelector('#equals');
+const clears = document.querySelector('#clear');
 
-let subtractOperator = function (a,b) {
-    console.log(a - b)
-}
+buttons.forEach(button => {
+    button.addEventListener('click', function() {
+        if ( button.innerText !== "=" && button.innerText !== "C") {
+            display.innerText += this.innerText;
+        }
+    });
+});
 
-let multiplyOperator = function (a,b) {
-    console.log(a * b)
-}
+clears.addEventListener('click', function() {
+    display.innerText = "";
+})
 
-let divideOperator = function (a,b) {
-    console.log(a / b)
-}
-
-let numOne = 5;
-let numTwo = 5;
-
-let operate = function () {
-    let question = prompt("Enter operator: ");
-    switch (question) {
-
-        case 'add':
-            addOperator(numOne, numTwo);
-            break;
-
-        case 'subtract':
-            subtractOperator(numOne, numTwo);
-            break;
-
-        case 'multiply':
-            multiplyOperator(numOne, numTwo);
-            break;
-
-        case 'divide':
-            divideOperator(numTwo, numOne);
-            break;
-
-    }
-}
-
-operate() */
