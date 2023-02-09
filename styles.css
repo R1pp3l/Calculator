@@ -27,6 +27,8 @@ body, html{
     border-radius: 20px;
     box-sizing: border-box;
     background-color: white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
 }
 
 .numbers {
